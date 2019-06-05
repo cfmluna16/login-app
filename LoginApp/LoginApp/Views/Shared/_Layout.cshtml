@@ -1,9 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title>@ViewBag.Title</title>
-        <meta charset="utf-8" />
-    </head>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+
+    @Styles.Render("~/bundles/styles")
+    @Scripts.Render("~/bundles/import-js")
+
+</head>
     <body>
         @RenderBody()
     </body>
