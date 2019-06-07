@@ -1,0 +1,22 @@
+﻿@model LoginApp.Models.Index
+
+@*@using (Ajax.BeginForm("Login", "Home", new AjaxOptions { InsertionMode=InsertionMode.ReplaceWith, UpdateTargetId= "login-div-to-replace", HttpMethod="Post" }))
+{*@
+    <div class="panel panel-default">
+        <div class="panel-heading"><span id="span-header">LOGIN APP</span></div>
+        <div class="panel-body">
+            <div id="login-div-to-replace">
+                @if (string.IsNullOrEmpty(Model.SessionKey))
+                {
+                    @Html.Partial("_LoginForm", Model.Login)
+                }
+                else
+                {
+                    @Html.Partial("_LoginSuccess")
+                }
+            </div>
+            
+        </div>
+    </div> 
+   
+

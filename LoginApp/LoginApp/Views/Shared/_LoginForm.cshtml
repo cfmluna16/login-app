@@ -1,0 +1,24 @@
+﻿@model LoginApp.Models.Login
+
+@ViewBag.LoginErrorMessage
+
+<div class="row login-row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">@Html.LabelFor(model => model.UserName)</div>
+    <div class="col-md-6">@Html.TextBoxFor(model => model.UserName, new { @class = "form-control login-text" })</div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row login-row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">@Html.LabelFor(model => model.UserPassword)</div>
+    <div class="col-md-6">@Html.PasswordFor(model => model.UserPassword, new { @class = "form-control login-text" })</div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row login-row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"><button type="button" id="btn-login" class="btn btn-success">LOGIN</button></div>
+    <div class="col-md-2"></div>
+</div>
+
+@Html.ActionLink("Register", "Register")

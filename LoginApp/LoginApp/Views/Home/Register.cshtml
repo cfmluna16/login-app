@@ -1,0 +1,38 @@
+﻿@model LoginApp.Models.Login
+
+@using (Html.BeginForm("SaveUser", "Home", FormMethod.Post, new { @onsubmit="return validatePassword();"}))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">Please enter credentials</div>
+        <div class="panel-body">
+            <div class="row login-row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">@Html.LabelFor(model => model.UserName)</div>
+                <div class="col-md-6">@Html.TextBoxFor(model => model.UserName, new { @class = "form-control login-text" })</div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row login-row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">@Html.LabelFor(model => model.UserPassword)</div>
+                <div class="col-md-6">@Html.PasswordFor(model => model.UserPassword, new { @class = "form-control login-text" })</div>
+                <div class="col-md-2"></div>
+            </div>
+            
+            <div class="row login-row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">@Html.LabelFor(model => model.VerifyUserPassword)</div>
+                <div class="col-md-6">@Html.PasswordFor(model => model.VerifyUserPassword, new { @class = "form-control login-text" })</div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row login-row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><button type="submit" class="btn btn-success">Register</button></div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
